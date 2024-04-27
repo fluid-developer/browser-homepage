@@ -27,17 +27,16 @@
   <script> twemoji.parse(document.body) </script>
   <script src="addons.js"></script>
     <script>
-      const form = document.getElementById('form');
-      const query = document.getElementById('query');
-	 /* se means search engine btw */
+      const f = document.getElementById('form');
+      const q = document.getElementById('query');
+	 /* se means search engine btw*/
       const se = 'https://searx.be/search?q=';
-
+      const site = '';
       function submitted(event) {
         event.preventDefault();
-        const url = se + '+' + query.value;
+        const url = se + site + '+' + q.value;
         window.location.replace(url, '_blank');
       }
-
       f.addEventListener('submit', submitted);
     </script>
 
