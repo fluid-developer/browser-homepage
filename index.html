@@ -34,7 +34,7 @@
 
       function submitted(event) {
         event.preventDefault();
-        const url = se + query.value;
+        const url = se + '+' + query.value;
         window.location.replace(url, '_blank');
       }
 
