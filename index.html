@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -9,21 +9,11 @@
 	<title>Homepage</title>
 	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
 
-</head>
-
-<body>
+</head> <body>
   
-<div id="header" align="center">
-	<img src="https://fluid-developer.github.io/browser-homepage/ddg.svg" width="125"/>
-<div>
-</div id="logo" align="center">
-	<img src="https://img.shields.io/badge/Fluid_Developer's_Homepage-blue?style=flat-square"/>
-</div>
-
-<!---<div id="seperator" align="center" >
-	<img src="literally-2k-texture-but-transparent.png" width="50"/>
-</div>--->
-
+<div id="selogo" align="center"><img src="https://raw.githubusercontent.com/searx/searx/master/searx/static/themes/oscar/img/logo_searx_a.png" width="125"></div>
+<div id="header" align="center"><img src="https://img.shields.io/badge/Fluid_Developer's_Homepage-blue?style=flat-square"/></div>
+	
 <div id="searchbar" align="center">
     <form role="search" id="form">
       <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
@@ -37,16 +27,15 @@
   <script> twemoji.parse(document.body) </script>
   <script src="addons.js"></script>
     <script>
-      const f = document.getElementById('form');
-      const q = document.getElementById('query');
-      const google = 'https://duckduckgo.com/?q=';
-      const site = '';
+      const form = document.getElementById('form');
+      const query = document.getElementById('query');
+	 /* se means search engine btw */
+      const se = 'https://searx.be/search?q=';
 
       function submitted(event) {
         event.preventDefault();
-        const url = google + site + '+' + q.value;
+        const url = se + query.value;
         window.location.replace(url, '_blank');
-
       }
 
       f.addEventListener('submit', submitted);
